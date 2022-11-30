@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
+    <title>Arnold's expense tracker</title>
+</head>
+<body>
+    <div class="grid grid-cols-2 gap-10 p-20 bg-gray-800 min-h-full">
+        <div class="flex flex-col gap-3 bg-green-500 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
+            <label class="text-4xl font-bold">Add Income</label>
+            <label class="text-xl" for="balance">Income</label>
+            <input class="rounded-md p-2" id="balance" type="text">
+            <div class="flex justify-between">
+                <button class="addIncome rounded-md font-bold text-xl button">Add income</button>
+                <button class="clearAll bg-red-700 rounded-md font-bold text-xl px-4 py-2 text-white">Clear all expenses</button>
+            </div>
+        </div>
+        <div class="flex flex-col gap-3 bg-green-500 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
+            <label class="text-4xl font-bold">Add expense</label>
+            <label class="text-xl" for="expenses">Type</label>
+            <input class="rounded-md p-2" id="type" type="text">
+            <label class="text-xl" for="expenses">Amount</label>
+            <input class="rounded-md p-2" id="amount" type="number">
+            <div class="flex justify-between">
+                <button class="addExpense rounded-md font-bold text-xl button">Add expense</button>
+                <button class="listAllExpenses bg-blue-500 rounded-md font-bold text-xl px-4 py-2 text-white">List all expenses</button>
+            </div>
+        </div>
+        <div class="w-full col-span-2">
+            <div class="bg-green-500 flex flex-col gap-3 rounded-3xl p-10 shadow-2xl mb-10 text-white font-bold">
+                <label class="text-4xl text-black font-bold">Total</label>
+                <div class="grid grid-cols-3 bg-gray-800 rounded-md p-5 h-28">
+                    <div>
+                        <p class="text-xl">Total Budget</p>
+                    </div>
+                    <div>
+                        <p class="text-xl">Expenses</p>
+                    </div>
+                    <div>
+                        <p class="text-xl">Balance</p>
+                    </div>
+                    <div>
+                        <p class="budget"></p>
+                    </div>
+                    <div>
+                        <p class="expenses"></p>
+                    </div>
+                    <div>
+                        <p class="balance"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-green-500 rounded-3xl p-10 shadow-2xl">
+                <h2 class="text-4xl font-bold mb-10">Expenses List</h2>
+                <div class="expensesList flex flex-col gap-y-10">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="./index.js"></script>
+</body>
+</html>
