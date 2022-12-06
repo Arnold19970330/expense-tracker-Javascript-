@@ -70,7 +70,7 @@ function listAllExpenses() {
         `<div class="grid grid-cols-3 bg-gray-800 rounded-md p-5">
         <span class="text-white font-bold">${data.title}</span>
         <span class="text-white font-bold">${data.amount}</span>
-        <div class="flex gap-5">
+        <div class="flex gap-5 text-xl">
             <i class="fa-solid fa-pen-to-square text-blue-500 cursor-pointer" onclick="modifyExpense(${index})"></i>
             <i class="fa-solid fa-trash text-red-700 cursor-pointer" onclick="deleteExpense(${index})"></i>
         </div>
