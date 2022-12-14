@@ -9,39 +9,44 @@
     <title>Arnold's expense tracker</title>
 </head>
 <body>
-    <div class="grid grid-cols-2 gap-10 p-20 bg-gray-800 min-h-full">
-        <div class="flex flex-col gap-3 bg-green-500 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
-            <label class="text-4xl font-bold">Add Income</label>
-            <label class="text-xl" for="balance">Income</label>
-            <input class="rounded-md p-2" id="balance" type="text">
-            <div class="flex justify-between">
-                <button class="addIncome rounded-md font-bold text-xl button">Add income</button>
-                <button class="clearAll bg-red-700 rounded-md font-bold text-xl px-4 py-2 text-white">Clear all expenses</button>
+    <div class="p-7 bg-gray-800">
+        <h1 class="text-3xl text-white md:text-4xl lg:text-6xl font-bold p-10">Expense tracker</h1>
+        <div class="grid lg:grid-cols-2 gap-10 mb-10">
+            <div class="flex flex-col gap-3 bg-green-500 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
+                <div class="flex flex-col gap-3">
+                    <label class="text-2xl md:text-3xl lg:text-4xl font-bold">Add Income</label>
+                    <label class="lg:text-xl" for="balance">Income</label>
+                    <input class="rounded-md p-2" id="balance" type="text">
+                </div>
+                <div class="flex gap-3 justify-between">
+                    <button class="addIncome rounded-md font-bold lg:text-xl button">Add income</button>
+                    <button class="clearAll bg-red-700 rounded-md font-bold lg:text-xl px-4 py-2 text-white">Clear all expenses</button>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3 bg-green-500 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
+                <label class="text-2xl md:text-3xl lg:text-4xl font-bold">Add expense</label>
+                <label class="lg:text-xl" for="expenses">Type</label>
+                <input class="rounded-md p-2" id="type" type="text">
+                <label class="lg:text-xl" for="expenses">Amount</label>
+                <input class="rounded-md p-2" id="amount" type="number">
+                <div class="flex justify-between gap-3">
+                    <button class="addExpense rounded-md font-bold lg:text-xl button">Add expense</button>
+                    <button class="listAllExpenses bg-blue-500 rounded-md font-bold lg:text-xl px-4 py-2 text-white">List all expenses</button>
+                </div>
             </div>
         </div>
-        <div class="flex flex-col gap-3 bg-green-500 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
-            <label class="text-4xl font-bold">Add expense</label>
-            <label class="text-xl" for="expenses">Type</label>
-            <input class="rounded-md p-2" id="type" type="text">
-            <label class="text-xl" for="expenses">Amount</label>
-            <input class="rounded-md p-2" id="amount" type="number">
-            <div class="flex justify-between">
-                <button class="addExpense rounded-md font-bold text-xl button">Add expense</button>
-                <button class="listAllExpenses bg-blue-500 rounded-md font-bold text-xl px-4 py-2 text-white">List all expenses</button>
-            </div>
-        </div>
-        <div class="w-full col-span-2">
+        <div class="col-span-2">
             <div class="bg-green-500 flex flex-col gap-3 rounded-3xl p-10 shadow-2xl mb-10 text-white font-bold">
-                <label class="text-4xl text-black font-bold">Total</label>
-                <div class="grid grid-cols-3 bg-gray-800 rounded-md p-5 h-28">
+                <label class="text-2xl md:text-3xl lg:text-4xl text-black font-bold">Total</label>
+                <div class="grid grid-cols-1 lg:grid-cols-3 bg-gray-800 rounded-md p-5 h-28">
                     <div>
-                        <p class="text-xl">Total Budget</p>
+                        <p class="lg:text-xl">Total Budget</p>
                     </div>
                     <div>
-                        <p class="text-xl">Expenses</p>
+                        <p class="lg:text-xl">Expenses</p>
                     </div>
                     <div>
-                        <p class="text-xl">Balance</p>
+                        <p class="lg:text-xl">Balance</p>
                     </div>
                     <div>
                         <p class="budget"></p>
@@ -55,7 +60,7 @@
                 </div>
             </div>
             <div class="bg-green-500 rounded-3xl p-10 shadow-2xl">
-                <h2 class="text-4xl font-bold mb-10">Expenses List</h2>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-10">Expenses List</h2>
                 <div class="expensesList flex flex-col gap-y-10">
                 </div>
             </div>
