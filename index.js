@@ -13,6 +13,7 @@ let items = [];
 let income = [];
 let expense = [];
 
+
 function addIncome() {
     let incomeItem = addIncomeInput.value
     totalAmount.innerHTML = incomeItem
@@ -54,7 +55,8 @@ function addExpense() {
             modify: true,
             deleteItem: false
         }
-    items.push(expenseItems)
+    items.push(expenseItems);
+    console.log(items)
     localStorage.setItem('ExpensesList', JSON.stringify(items))
     expenses.innerHTML = trackExpense()
     budget.innerHTML = trackBalance() - trackExpense()
@@ -82,7 +84,8 @@ function listAllExpenses() {
 function deleteExpense(index) {
     const data = JSON.parse(localStorage.getItem('ExpensesList'));
     const expenseList = document.querySelector('.expensesList')
-    data.splice(index,1)
+    data.splice(index,1);
+    items.splice(index,1);
     localStorage.setItem('ExpensesList',JSON.stringify(data))
     expenseList.innerHTML = ' ';
     expenses.innerHTML = trackExpense()
@@ -95,7 +98,7 @@ function modifyExpense(index) {
     let filter = data.at(index)
     addExpenseTypeInput.value = filter.title
     addExpenseAmountInput.value = filter.amount
-    deleteExpense(index)
+    deleteExpense(data.at(index))
 }
 
 function showExpenses() {
